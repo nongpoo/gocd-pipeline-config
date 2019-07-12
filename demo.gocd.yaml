@@ -24,8 +24,11 @@ pipelines:
     stages:
       - build:
           jobs:
-            npm-install:
+            build:
               tasks:
                 - exec:
                     command: ./gotham-todo/build.sh
-          
+                - exec:
+                    command: ./gotham-todo/apply-infrastructure.sh 
+                - exec:
+                    command: ./gotham-todo/copy-static-files.sh
