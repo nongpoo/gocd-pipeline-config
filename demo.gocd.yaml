@@ -15,3 +15,17 @@ pipelines:
                     command: ls
                     arguments:
                       - .
+  Build:
+    group: Todo-list
+    materials:
+      git-repo:
+        git: https://github.com/nongpoo/vue-gotham-todo.git
+        branch: master
+    stages:
+      - build:
+          jobs:
+            npm-install:
+              tasks:
+                - exec:
+                    command: ./gotham-todo/build.sh
+          
