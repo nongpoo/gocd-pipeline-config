@@ -24,7 +24,7 @@ pipelines:
     stages:
       - build:
           jobs:
-            build:
+            npm-install:
               tasks:
                 - exec:
                     command: ./gotham-todo/build.sh
