@@ -1,7 +1,7 @@
 format_version: 2
 pipelines:
   Demo:
-    group: Todo App
+    group: Todo-App
     materials:
       git-repo:
         git: https://github.com/nongpoo/gocd-pipeline-config.git
